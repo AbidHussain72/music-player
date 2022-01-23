@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Music App</title>
+  </head>
+  <body>
+    <audio class="audioSource">
+      <source src="./media/audio/into.mp3" />
+    </audio>
+    <div class="playListContainer">
+      <h1 class="title">All Songs</h1>
+      <div class="playList">
+        <div path="./media/audio/bensound-goinghigher.mp3">
+          (1) bensound-goinghigher
+        </div>
+        <div
+          path="./media/audio/Culture Code - Fairytale (feat. Amanda Collis)  [NCS Release](MP3_70K).mp3"
+        >
+          (2) Culture Code - Fairytale
+        </div>
+        <div path="./media/audio/into.mp3">(3) into</div>
+        <div path="./media/audio/mixkit-magical-intro-presentation-1147.wav">
+          (4) mixkit-magical
+        </div>
+        <div path="./media/audio/into.mp3">(5) into</div>
+      </div>
+    </div>
+    <div class="player">
+      <div class="musicLeft">
+        <div class="AlbumImg">
+          <img src="./media/images/js.png" alt="" />
+        </div>
+      </div>
+      <div class="musicRight">
+        <div class="controllers">
+          <button class="play" onclick="play()">
+            <i class="fas fa-play"></i>
+          </button>
+          <button class="pause" onclick="pause()">
+            <i class="fas fa-pause"></i>
+          </button>
+          <button class="stop" onclick="stop()">
+            <i class="fas fa-stop"></i>
+          </button>
+          <button class="backward" onclick="prev()">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button class="forward" onclick="next()">
+            <i class="fas fa-forward"></i>
+          </button>
+          <button class="mute" onclick="mute()" id="volumeBtn">
+            <i class="fas fa-volume-up"></i>
+          </button>
+        </div>
+        <div class="statusBar">
+          <div id="secTime">10:20</div>
+          <input type="range" class="songBar" min="0"" max="100" step="0.01"
+          oninput="seek(event)" />
+          <div id="minTime"></div>
+        </div>
+        <div class="musicName">
+          <h2 class="musicTitle">Music Name</h2>
+          <div class="volume">
+            <input
+              class="volume-control"
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              oninput="volume(event)"
+            />
+            volume: <span class="volumeValue">30</span>%
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
+"

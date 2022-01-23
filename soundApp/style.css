@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+}
+.player {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #e7e7e7;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background: #e5e5e5;
+}
+.musicLeft {
+  width: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+button {
+  padding: 5px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  transition: all 0.7s ease;
+}
+button:hover {
+  border-color: #4361ee;
+  box-shadow: 0 0 3px #707070;
+}
+
+.AlbumImg img {
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.musicRight {
+  width: 94%;
+  display: flex;
+}
+.controllers {
+  padding: 5px 10px;
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  align-items: center;
+}
+.play,
+.stop,
+.pause,
+.mute,
+.backward,
+.forward {
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.statusBar {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.statusBar .songBar {
+  width: 90%;
+  cursor: pointer;
+}
+.playListContainer {
+  width: 60%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  box-shadow: 0 0 3px #969696;
+  margin-top: 20px;
+  background: #e5e5e5;
+}
+.playListContainer .title {
+  width: 100%;
+  background: #0466c8;
+  padding: 7px 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+}
+.playListContainer .playList {
+  padding: 10px;
+}
+.playList div {
+  color: rgb(66, 66, 66);
+  font-size: 1.3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  padding: 4px 7px;
+  transition: all 0.7s ease;
+  background: #fff;
+}
+.playList div:hover {
+  color: #0466c8;
+  border-color: #0466c8;
+  box-shadow: 0 0 3px #707070;
+}
+.volume-control {
+  -webkit-appearance: none;
+  width: 100%;
+  border-radius: 2px;
+  background: #023047;
+  outline: none;
+  height: 10px;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+.volume-control::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 18px;
+  border-radius: 2px;
+  background: #0466c8;
+  cursor: pointer;
+}
+.musicName {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  padding: 0 5px;
+}
+.songBar {
+  width: 100%;
+  height: 3px;
+  background: #0466c8;
+}
+.musicTitle {
+  font-size: 13px;
+  color: #0466c8;
+}
+#secTime {
+  margin-right: 5px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 14px;
+}
+#minTime {
+  margin-left: 5px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 14px;
+}
